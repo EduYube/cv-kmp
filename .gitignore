@@ -1,0 +1,35 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Kotlin/IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Local config
+local.properties
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Android
+captures/
+.externalNativeBuild/
+.cxx/
+
+# iOS / Xcode
+DerivedData/
+*.xcworkspace
+*.xcodeproj/project.xcworkspace
+*.xcuserdata
+*.xcuserstate
+
+# Kotlin Native
+konan/
