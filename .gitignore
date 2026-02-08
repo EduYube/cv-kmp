@@ -1,35 +1,108 @@
-# Gradle
-.gradle/
-build/
+*.iml
+.kotlin
+.gradle
 **/build/
+xcuserdata
+!src/**/build/
+local.properties
+.idea
+.DS_Store
+captures
+.externalNativeBuild
+.cxx
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+node_modules/
 
-# Kotlin/IDE
+############################
+# OS
+############################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+############################
+# IDEs
+############################
+
+# IntelliJ / Android Studio
 .idea/
 *.iml
 *.ipr
 *.iws
+out/
 
-# Local config
-local.properties
+# VSCode
+.vscode/
 
-# Logs
-*.log
+############################
+# Gradle / Kotlin
+############################
 
-# OS
-.DS_Store
-Thumbs.db
+.gradle/
+build/
+**/build/
+.gradle-cache/
 
-# Android
-captures/
-.externalNativeBuild/
+# Kotlin Native / KMP
+konan/
+.kotlin/
 .cxx/
 
+############################
+# Local config (NO subir nunca)
+############################
+
+local.properties
+*.keystore
+*.jks
+signing.properties
+
+############################
+# Logs
+############################
+
+*.log
+
+############################
+# Android
+############################
+
+captures/
+.externalNativeBuild/
+
+############################
 # iOS / Xcode
+############################
+
 DerivedData/
 *.xcworkspace
-*.xcodeproj/project.xcworkspace
-*.xcuserdata
+*.xcuserdata/
 *.xcuserstate
+*.moved-aside
+*.pbxuser
 
-# Kotlin Native
-konan/
+# CocoaPods (por si algún día lo usas)
+Pods/
+
+############################
+# Kotlin Multiplatform builds
+############################
+
+iosApp/build/
+shared/build/
+
+############################
+# Misc
+############################
+
+tmp/
+temp/

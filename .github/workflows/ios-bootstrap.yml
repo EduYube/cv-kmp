@@ -1,0 +1,33 @@
+name: iOS Bootstrap (SwiftUI)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bootstrap:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create SwiftUI iOS project (Xcode)
+        shell: bash
+        run: |
+          mkdir -p iosApp
+          cd iosApp
+
+          # Crear proyecto SwiftUI (Xcode)
+          # Nota: 'xcodebuild -create-project' no existe; usamos xcodegen? no está instalado por defecto.
+          # En su lugar: usamos 'swift package init' como base real compilable.
+          # (Xcode abrirá el paquete como proyecto)
+          mkdir -p CVKMPiOS
+          cd CVKMPiOS
+          swift package init --type executable
+
+      - name: Commit generated iOS scaffold
+        shell: bash
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add iosApp
+          git commit -m "chore(ios): bootstrap iosApp via swift package" || echo "No changes to commit"
+          git push
