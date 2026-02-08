@@ -1,14 +1,14 @@
-### iOS App (SwiftUI)
+# iOS App (SwiftUI)
 
-Este módulo contendrá la aplicación iOS en SwiftUI.
+Este directorio contiene el código SwiftUI (scaffold) para la app iOS.
 
-La lógica compartida proviene del módulo `:shared` (Kotlin Multiplatform),
-que se exporta como framework iOS.
+⚠️ Nota: Desde Windows no se puede compilar ni ejecutar iOS (requiere Xcode/macOS).
+Aun así:
+- El módulo `:shared` (KMP) define targets iOS y genera el framework en CI (macOS runner).
+- Cuando se disponga de macOS, se creará el proyecto Xcode dentro de `iosApp/` y se linkará `shared.framework`.
 
-Desde Windows no se puede compilar Swift/Xcode.
-La validación del target iOS se realiza en CI (macOS runner).
-
-Cuando se disponga de macOS:
-- Crear proyecto SwiftUI en esta carpeta
-- Importar shared.framework
-- Conectar StateFlow/UseCases desde Kotlin
+## Próximos pasos (macOS)
+1. Crear proyecto SwiftUI en Xcode dentro de `iosApp/`
+2. Añadir `shared.framework` como dependencia
+3. Inicializar Koin desde Swift (`SharedBootstrap.start()`)
+4. Consumir `StateFlow`/ViewModels desde SwiftUI
