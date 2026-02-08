@@ -12,6 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fix gradlew (LF + executable)
+        shell: bash
+        run: |
+          perl -pi -e 's/\r\n/\n/g' gradlew
+          chmod +x gradlew
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
@@ -20,8 +26,10 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+        with:
+          cache-disabled: true
 
-      - name: Build (Android + shared)
+      - name: Build
         run: ./gradlew build
 
   ios-shared:
@@ -29,6 +37,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fix gradlew (LF + executable)
+        shell: bash
+        run: |
+          perl -pi -e 's/\r\n/\n/g' gradlew
+          chmod +x gradlew
+
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
@@ -37,6 +51,8 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+        with:
+          cache-disabled: true
 
       - name: Link iOS framework (shared)
         run: ./gradlew :shared:linkDebugFrameworkIosSimulatorArm64
