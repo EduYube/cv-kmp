@@ -5,6 +5,22 @@ App de CV construida con Kotlin Multiplatform (KMP) para compartir lógica entre
 - Android UI: Jetpack Compose (nativo)
 - iOS UI: SwiftUI (nativo)
 
+## Commit convention (Conventional Commits)
+
+Format:
+`type(scope): description`
+
+Types we use:
+- feat, fix, docs, chore, refactor, test, build, ci
+
+Common scopes in this repo:
+- shared, shared-di, domain, data, presentation, android, ios, ci, build
+
+Examples:
+- feat(shared-di): bootstrap koin with platform modules
+- fix(android): use unique namespace for shared module
+- docs(shared): document koin bootstrap and initKoin api decision
+
 ## Modules
 - `app`: Android application
 - `shared`: KMP shared module (domain/data/presentation)
