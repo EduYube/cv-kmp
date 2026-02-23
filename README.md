@@ -21,6 +21,10 @@ Examples:
 - fix(android): use unique namespace for shared module
 - docs(shared): document koin bootstrap and initKoin api decision
 
+### Local git commit template
+Run:
+`git config commit.template .gitmessage`
+
 ## Modules
 - `app`: Android application
 - `shared`: KMP shared module (domain/data/presentation)
