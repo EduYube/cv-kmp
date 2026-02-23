@@ -10,11 +10,12 @@ kotlin {
         minSdk = 24
     }
 
-    val iosTargets = listOf(
-        iosX64(),
-        iosArm64(),
-        iosSimulatorArm64()
-    )
+    val iosTargets =
+        listOf(
+            iosX64(),
+            iosArm64(),
+            iosSimulatorArm64(),
+        )
 
     iosTargets.forEach { target ->
         target.binaries.framework {
