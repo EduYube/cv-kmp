@@ -1,4 +1,4 @@
-![CI](https://github.com/<TU_USER>/<TU_REPO>/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/EduYube/cv-kmp/actions/workflows/ci.yml/badge.svg)](https://github.com/EduYube/cv-kmp/actions/workflows/ci.yml)
 # CV KMP
 
 App de CV construida con Kotlin Multiplatform (KMP) para compartir lógica entre Android e iOS.
