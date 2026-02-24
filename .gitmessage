@@ -1,0 +1,7 @@
+# <type>(<scope>): <short summary>
+#
+# Types: feat, fix, docs, chore, refactor, test, build, ci
+# Scopes: shared, shared-di, domain, data, presentation, android, ios, ci, build
+#
+# Body (optional): what/why, not how.
+# Footer (optional): Breaking changes, ticket refs, etc.
